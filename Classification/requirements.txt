@@ -1,0 +1,4 @@
+jupyter==1.0.0
+tensorflow==2.12.0
+pandas==1.3.2
+pillow==10.0.0
