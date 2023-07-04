@@ -60,10 +60,11 @@ def page_video_analysis():
     for root, dirs, files in os.walk('./videos'):
         for file_name in files:
             file_path = os.path.join(root, file_name)
-            with open(file_path, 'rb') as video_file:
-                video_bytes = video_file.read()
-                st.write(file_path)
-                st.video(video_bytes, format='video/mp4')
+            if ".mp4" in file_path:
+                with open(file_path, 'rb') as video_file:
+                    video_bytes = video_file.read()
+                    st.write(file_path)
+                    st.video(video_bytes, format='video/mp4')
 
 
 def page0(): # Introduction 
