@@ -17,10 +17,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install tmux to manage several terminals with different processes in the docker
 RUN apt-get install -y tmux
 
-ADD ./Classification/model/model_ResNet50.h5 ./test/
-ADD ./Classification/inference_classifier.py ./test/
+ADD ./Classification/model/model_ResNet50.h5 ./app/
+ADD ./Classification/inference_classifier.py ./app/
 ADD ./Classification/requirements.txt .
-ADD ./campagne/tracking/ ./test/campagne/tracking/
+ADD ./video/tracking/ ./app/video/tracking/
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
