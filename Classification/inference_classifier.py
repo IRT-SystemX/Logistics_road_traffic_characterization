@@ -73,4 +73,4 @@ if __name__ == '__main__':
                                             current_vehicle_df['id'].iloc[0],
                                             current_vehicle_df['category'].mode()[0]]], columns=df.columns.values)])
 
-    vehicle_df.to_csv("inference_results.csv", index=False) 
+    vehicle_df.to_csv("data/inference_results.csv", index=False) 
