@@ -1,0 +1,2 @@
+# Traffic distribution: charts
+The following charts display information on consolidated data, ie. all the vehicles detected during the experimentation.
