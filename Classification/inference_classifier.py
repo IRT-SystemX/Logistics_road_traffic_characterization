@@ -44,7 +44,7 @@ if __name__ == '__main__':
     
     #initiate csv_file
     df = pd.DataFrame(columns=["path","id","category"])
-    df.to_csv("inference_results.csv")
+    df.to_csv("inference_results.csv", index=False)
     
     for chunk in chunks:
         X = []
