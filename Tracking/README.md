@@ -10,7 +10,7 @@ The output will be in the form of cropped images of all the vehicles identified 
 
 The easiest way to execute the following code is with a docker environnement.
 
-To do this first build the docker image from the parent directory 
+To do this first build the docker image from the parent directory. Note that the creation of the image can take a while.
 ```
 docker build -t detector -f Tracking/Dockerfile .
 ```
@@ -21,7 +21,7 @@ docker run -v data:/data -it detector
 Inside the docker image, go to the detector folder :
 
 ```
-cd detector
+cd app
 ```
 
 You can then execute the code with:
