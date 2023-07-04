@@ -12,7 +12,7 @@ The easiest way to execute the following code is with a docker environnement.
 
 To do this first build the docker image from the parent directory 
 ```
-docker build -t detector -f logistic_vehicles_detection/Dockerfile .
+docker build -t detector -f Tracking/Dockerfile .
 ```
 Then you can run the docker image, be sure to add a permanent volume - with the -v argument - so that the results of the classifier are kept when the docker image is closed:
 ```
