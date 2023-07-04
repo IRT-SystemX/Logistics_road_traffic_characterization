@@ -21,3 +21,7 @@ This module allows you to specialize the classification done by the yolov5 model
 
 ### Visualization
 This module generates a streamlit web page that allows you to visualize the number of vehicles identified during the tracking and classification as well as the video with the bounding boxes generated during tracking.
+
+## Docker Environnement
+
+Each module contains a dockerfile that allows you to generate a docker image to execute the code more easily.
