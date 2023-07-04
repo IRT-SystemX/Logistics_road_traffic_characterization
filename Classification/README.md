@@ -24,7 +24,7 @@ docker run -v data:/data -it classifier
 Inside the docker image, go to the classification folder :
 
 ```
-cd classification
+cd app
 ```
 
 You can then use the inference_classifier with:
