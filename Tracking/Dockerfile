@@ -16,12 +16,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       ssh libhdf5-dev
 # Install tmux to manage several terminals with different processes in the docker
 RUN apt-get install -y tmux
-ADD ./video/ ./test/video/
-ADD ./tests_on_logistic_vehicles_detection/deep_sort/ ./test/deep_sort/
-ADD ./tests_on_logistic_vehicles_detection/torchreid/ ./test/torchreid/
-ADD ./tests_on_logistic_vehicles_detection/yolov5/ ./test/yolov5/
-ADD ./tests_on_logistic_vehicles_detection/track.py ./test/
-ADD ./tests_on_logistic_vehicles_detection/requirements.txt .
+ADD ./video/ ./app/video/
+ADD ./Tracking/deep_sort/ ./app/deep_sort/
+ADD ./Tracking/torchreid/ ./app/torchreid/
+ADD ./Tracking/yolov5/ ./app/yolov5/
+ADD ./Tracking/track.py ./app/
+ADD ./Tracking/requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
