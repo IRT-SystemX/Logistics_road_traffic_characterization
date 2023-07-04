@@ -18,7 +18,7 @@ docker build -t classifier -f Classification/Dockerfile .
 
 Then you can run the docker image, be sure to add a permanent volume - with the -v argument - so that the results of the classifier are kept when the docker image is closed:
 ```
-docker run -v data:/data -it classifier
+docker run -v <path_to_link_persitent_volume>:/app/data -it classifier
 ```
 
 Inside the docker image, go to the classification folder :
