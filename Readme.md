@@ -69,7 +69,7 @@ Paris2Connect is an initiative supporting the demonstration of advanced digital 
 
 https://paris2connect.agorize.com/fr/challenges/appel-a-experimentations
 
-![Paris2connect logo](images/logo_paris2connect.PNG) 
+![Paris2connect logo](images/logo_paris2connect.png) 
  
 ## IRT SystemX
 The Institute for Technological Research SystemX is a Research and Technical Organization positioned as an accelerator for the digital transition of industries and territories.
@@ -77,7 +77,7 @@ IRT SystemX is based in France and operates different technological platforms in
 
 www.irt-systemx.fr/en 
 
-![IRT SystemX logo](images/logo_systemX.jpeg) 
+![IRT SystemX logo](images/logo_systemX.jpg) 
 
 ## Open source code
 
