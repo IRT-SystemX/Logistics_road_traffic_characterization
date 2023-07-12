@@ -59,18 +59,25 @@ This work has been supported by two research and development frameworks:
 
 ### European project LEAD
 LEAD is a H2020 European collaborative project focusing on the development of digital twins for low emission last mile logistics. In that context IRT SystemX explored the generation of new urban logistics dataset to support the development of dedicated analysis and management capacities.
+
 https://www.leadproject.eu/
+
 ![LEAD project logo](images/logo_lead.png) 
 
 ### Paris2Connect
 Paris2Connect is an initiative supporting the demonstration of advanced digital infrastructures and solutions in urban areas.
+
 https://paris2connect.agorize.com/fr/challenges/appel-a-experimentations
+
 ![Paris2connect logo](images/logo_paris2connect.PNG) 
  
 ## IRT SystemX
 The Institute for Technological Research SystemX is a Research and Technical Organization positioned as an accelerator for the digital transition of industries and territories.
 IRT SystemX is based in France and operates different technological platforms in the field of digital engineering.
+
 www.irt-systemx.fr/en 
+
 ![IRT SystemX logo](images/logo_systemX.jpeg) 
+
 ## Open source code
 
