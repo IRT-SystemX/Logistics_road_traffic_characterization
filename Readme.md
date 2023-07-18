@@ -44,16 +44,6 @@ Outputs: streamlit web page
 Each module contains a dockerfile that allows you to generate a docker image to execute the code more easily.
 
 
-## Logistics road traffic assessment
-Last mile logistics flows (both B2B and B2C) generate a great impact on road traffic. Monitoring these patterns out of traffic data video could help to understand traffic arrangements under spatiotemporal parameters.
-
-IRT SystemX implemented this demonstrator to tackle urban logistics challenges:
-Development of urban logistics knowledge capacities based on video detection algorithms
-Differentiation of logistics flows among road traffic
-Categorisation of logistics vehicles
-
-This experimentation has been conducted in Paris. Video data have been captured during spring 2022 and processed afterwards. The experimentation process has been supported by Paris2Connect initiative.
-
 ## Credits 
 This work has been supported by two research and development frameworks:
 
