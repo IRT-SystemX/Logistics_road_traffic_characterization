@@ -26,3 +26,10 @@ When the command is executed, you can then visualize the streamlit web page by o
 ```
 http://localhost:8501
 ```
+
+## Troubleshooting 
+If the video doesn't load on the tab "Video analysis", use the following command to convert the video to H.264 format:
+```
+ffmpeg -i <path_to_the_video> -c:v libx264 -preset slow -crf 23 -c:a aac -b:a 128k <path_to_the_video>
+
+```
