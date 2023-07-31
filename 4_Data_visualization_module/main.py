@@ -2,6 +2,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
+import glob
+from PIL import Image
 
 
 def main():
@@ -10,7 +12,10 @@ def main():
 
     # Siderbar selection (will redirect to each "web" page)
     st.sidebar.title("Menu")
-    app_mode = st.sidebar.selectbox("", ["Introduction", "Charts", "Video analysis"])
+    app_mode = st.sidebar.selectbox("",
+                                    ["Introduction",
+                                     "Charts",
+                                     "Video analysis"])
     if app_mode == "Introduction":
         page0()
     elif app_mode == "Charts":
@@ -34,6 +39,38 @@ def page_charts():
 
     # Display the plot in Streamlit
     st.pyplot(fig)
+    col_1, col_2, col_3 = st.columns(3)
+    cpt = 0
+    parent_folder = glob.glob('./videos/*/crops/')[0]
+    vehicle_type_folders = glob.glob(parent_folder+'/*/')
+
+    for vehicle_type_folder in vehicle_type_folders:
+        st.header(f"Vehicle type: {vehicle_type_folder.split('/')[-2]}")
+        vehicle_folders = glob.glob(vehicle_type_folder+'/*/')
+        for vehicle_folder in vehicle_folders:
+            st.header(f"Vehicle id: {vehicle_folder.split('/')[-2]}")
+            cpt = 0
+            col_1, col_2, col_3, col_4 = st.columns(4)
+            for image in os.listdir(vehicle_folder):
+                image_path = vehicle_folder+image
+                image = Image.open(image_path)
+                if cpt % 4 == 0:
+                    col_1.image(image,
+                                caption=os.path.basename(image_path),
+                                width=224)
+                if cpt % 4 == 1:
+                    col_2.image(image,
+                                caption=os.path.basename(image_path),
+                                width=224)
+                if cpt % 4 == 2:
+                    col_3.image(image,
+                                caption=os.path.basename(image_path),
+                                width=224)
+                if cpt % 4 == 3:
+                    col_4.image(image,
+                                caption=os.path.basename(image_path),
+                                width=224)
+                cpt += 1
 
 
 def page_video_analysis():

@@ -1,3 +1,11 @@
 ### Logistics vehicules detection end to end.
 
-To do : Add intro.
+#### Characterization of logistics road traffic based on video analysis
+Last mile logistics flows (both B2B and B2C) generate a great impact on road traffic. Monitoring these patterns out of traffic data video could help to understand traffic arrangements under spatiotemporal parameters. 
+
+#### Structure of the web-page
+This web-page is composed of two tabs, one called Charts, the other Video analysis.
+
+Charts gives a barplot of the number of each category of vehicles identified in your video by the classification module. It also present the croped images of each individual vehicle identified by the tracking module.
+
+Video analysis gives a side-by side view of the original video as well as the video with the bounding boxes and category of each vehicle.
