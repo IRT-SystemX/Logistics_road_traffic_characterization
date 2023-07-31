@@ -15,27 +15,39 @@ These modules can be executed independently as long as correct inputs are provid
 
 ### 1/ Video anonymization module
 Function: faces and registration plates blurring
+
 Inputs: road traffic video files
+
 Outputs: anonymized video files
-https://github.com/understand-ai/anonymizer
+
+We suggest the use of the following anonymization modules: 
+* https://github.com/understand-ai/anonymizer
+* https://github.com/ArtLabss/open-data-anonymizer
 
 ### 2/ Vehicles tracking module
 Function: classification of road vehicles in a video file; uses DeepSort tracking algorithm and a Yolov5 model; vehicles’ classes (trucks, cars, bikes, motorbikes, buses)
+
 Inputs: road traffic video files
+
 Outputs: cropped images of all the vehicles identified for each frame of the video plus a new video containing bounding boxes around the identified vehicles
+
 https://github.com/mikel-brostrom/Yolov5_StrongSORT_OSNet/tree/v5.0 
 
 
 ### 3/ Vehicles classification module
 Function: classification of road vehicles in image files; uses a pre-trained ResNet50 model; vehicles’ classes (trucks, Light Commercial Vehicles, cars, bikes, motorbikes, buses)
+
 Inputs: cropped images of identified road vehicles 
+
 Outputs: associated class saved in a csv file
 This module allows you to specialize the classification done by the yolov5 model during tracking for Light commercial vehicles (LCV).
 
 
 ### 4/ Data visualization module
 Function: dashboarding road classification results to visualize traffic composition on different data collection spots and time ranges
+
 Inputs: csv file of vehicle's id with their identified class
+
 Outputs: streamlit web page
 
 
@@ -49,7 +61,7 @@ First you'll need to clone this repository and go to it's parent directory:
 
 ```
 git clone URL
-cd FOLDER_NAME
+cd Logistics_road_traffic_characterization
 ```
 
 Then, if you want to anonymize your video data (faces and/or license plates) you can use the code present in this repository: [understand.ai Anonymizer](https://github.com/understand-ai/anonymizer).
@@ -137,6 +149,4 @@ IRT SystemX is based in France and operates different technological platforms in
 www.irt-systemx.fr/en 
 
 ![IRT SystemX logo](images/logo_systemX.jpg) 
-
-## Open source code
 
