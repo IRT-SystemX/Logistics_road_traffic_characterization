@@ -18,15 +18,16 @@ RUN apt-get -y update && apt-get install -y \
 # Install tmux to manage several terminals with different processes in the docker
 RUN apt-get install -y tmux
 
-ADD ./Comptage/figures/ ./app/figures/
+ADD ./4_Data_visualization_module/figures/ ./app/figures/
+ADD ./results/ ./app/videos/
 ADD ./video/ ./app/videos/
-ADD ./Comptage/main.py ./app/main.py
-ADD ./Comptage/page_0.txt ./app/page_0.txt
-ADD ./Comptage/page1_header.txt ./app/page1_header.txt
-ADD ./video/inference_results.csv ./app/inference_results.csv
+ADD ./4_Data_visualization_module/main.py ./app/main.py
+ADD ./4_Data_visualization_module/page_0.txt ./app/page_0.txt
+ADD ./4_Data_visualization_module/page1_header.txt ./app/page1_header.txt
+ADD ./results/inference_results.csv ./app/inference_results.csv
 
 # Add and install the requirements
-ADD ./Comptage/requirements.txt .
+ADD ./4_Data_visualization_module/requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 

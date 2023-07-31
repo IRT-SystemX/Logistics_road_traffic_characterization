@@ -17,15 +17,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install tmux to manage several terminals with different processes in the docker
 RUN apt-get install -y tmux
 
-ADD ./Classification/model/model_ResNet50.h5 ./app/
-ADD ./Classification/inference_classifier.py ./app/
-ADD ./Classification/requirements.txt .
-ADD ./video/tracking/ ./app/video/tracking/
+ADD ./3_Vehicles_classification_module/model/model_ResNet50.h5 ./app/
+ADD ./3_Vehicles_classification_module/inference_classifier.py ./app/
+ADD ./3_Vehicles_classification_module/requirements.txt .
+ADD ./results/ ./app/video/tracking/
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-VOLUME /data
+VOLUME data
 # Expose the port 8888 to run a jupyter server, the port 6006 for tensorboard
 EXPOSE 8888 6006
 

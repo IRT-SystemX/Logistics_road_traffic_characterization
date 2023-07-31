@@ -43,6 +43,75 @@ Outputs: streamlit web page
 
 Each module contains a dockerfile that allows you to generate a docker image to execute the code more easily.
 
+Each module can be used independently or sequentially depending on your personnal use. To use them independently you can go to the documentation presented in the "Readme.md" on each folder of this repository. To use them sequentially you can follow this documentation:
+
+First you'll need to clone this repository and go to it's parent directory:
+
+```
+git clone URL
+cd FOLDER_NAME
+```
+
+Then, if you want to anonymize your video data (faces and/or license plates) you can use the code present in this repository: [understand.ai Anonymizer](https://github.com/understand-ai/anonymizer).
+
+### Vehicles tracking module:
+
+To use the tracking module first build and run the docker container: 
+```
+docker build -t detector -f 2_Vehicles_tracking_module/Dockerfile .
+
+and
+
+docker run -v ./results:/app/data -it detector
+
+```
+Then use the following commands: 
+```
+cd app
+
+python track.py --source ./video --project ./data --imgsz 1920 --save-vid --save-crop --classes 1 2 3 5 7
+```
+
+### Vehicles classification module:
+To use the classification module first build and run the docker container: 
+```
+docker build -t classifier -f 3_Vehicles_classification_module/Dockerfile .
+
+and
+
+docker run -v results:/app/data -it classifier
+```
+
+then use the following commands:
+
+```
+cd app
+
+and
+
+python inference_classifier.py --model model_ResNet50.h5 --img_size 224*224 --data ./video/tracking/ --max_img_in_memory 32
+```
+### Data visualization module:
+To use the visualization module first build and run the docker container: 
+```
+docker build -t comptage -f ./4_Data_visualization_module/Dockerfile .
+
+and
+
+docker run -p 8501:8501 -it comptage
+```
+
+then use the following commands:
+
+```
+streamlit run main.py
+```
+
+When the command is executed, you can then visualize the streamlit web page by opening a web browser to the following url:
+
+```
+http://localhost:8501
+```
 
 ## Credits 
 This work has been supported by two research and development frameworks:

@@ -7,7 +7,7 @@ To execute this module, the easiest way will be with the docker environnement.
 
 First build the docker image from the parent directory :
 ```
-docker build -t comptage -f ./Comptage/Dockerfile .
+docker build -t comptage -f ./4_Data_visualization_module/Dockerfile .
 
 ```
 

@@ -17,11 +17,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Install tmux to manage several terminals with different processes in the docker
 RUN apt-get install -y tmux
 ADD ./video/ ./app/video/
-ADD ./Tracking/deep_sort/ ./app/deep_sort/
-ADD ./Tracking/torchreid/ ./app/torchreid/
-ADD ./Tracking/yolov5/ ./app/yolov5/
-ADD ./Tracking/track.py ./app/
-ADD ./Tracking/requirements.txt .
+ADD ./2_Vehicles_tracking_module/deep_sort/ ./app/deep_sort/
+ADD ./2_Vehicles_tracking_module/torchreid/ ./app/torchreid/
+ADD ./2_Vehicles_tracking_module/yolov5/ ./app/yolov5/
+ADD ./2_Vehicles_tracking_module/track.py ./app/
+ADD ./2_Vehicles_tracking_module/requirements.txt .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
